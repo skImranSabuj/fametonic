@@ -29,14 +29,14 @@ export default function Home() {
       </Head>
 
        
-      <main className="min-h-screen text-white px-[20px] relative font-semibold overflow-visible">
+      <main className="w-full min-h-screen text-white px-[20px] relative font-semibold overflow-visible pb-[40px]">
         {/* Top Bar */}
-        <div className="text-white text-center py-2 px-4 font-semibold bg-[linear-gradient(to_right,_#FC004E,_#10CBE0)] absolute top-0 left-0 w-full z-10">
+        <div className="w-full text-white text-center p-[20px] font-semibold bg-[linear-gradient(to_right,_#FC004E,_#10CBE0)] absolute top-0 left-0 z-10">
           <p className="text-base text-[16px] md:text-[22px]">
                       <span className="text-[#00E7F9] font-extrabold">🚀 FRESH BEGINNINGS SALE:</span> Extra 25% OFF, Limited Spots - start your journey today!
           </p>
         </div>
-        {/* Navigation */}
+        {/* Navigation */}d
         <header className="relative flex justify-center md:justify-between md:mx-[211px] pt-[81px]">
           <div className="relative w-[107.78px] h-[46.07px] md:w-[173.12px] md:h-[76px]">
             <Image
@@ -63,18 +63,18 @@ export default function Home() {
         </header>
 
         {/* Hero Section */}
-        <section className="flex flex-col-reverse md:flex-row items-center ">
-          <div className="flex w-full md:w-[511] md:h-[516] flex-col justify-center md:py-24 md:ml-[211px]">
+        <section className="flex flex-col-reverse md:flex-row items-center relative mt-[60px]">
+          <div className="flex md:w-[516px] md:h-[511px] flex-col justify-center md:py-24 md:ml-[211px]">
             <div className={`${fontUrbanist.className} text-[25px] md:text-[35px] font-bold text-center md:text-start`}>
-              <h2 className="leading-tight">
+              <p className="leading-tight tracking-[0] auto-he">
                 Want to Turn Social Media Into a Profitable Career?
-              </h2>
-              <h2 className="max-w-2xl mb-6 text-[#00E7F9] drop-shadow-[1px_5px_2px_red]">
+              </p>
+              <p className="mb-6 text-[#00E7F9] drop-shadow-[1px_5px_2px_red] tracking-[0]">
                 Discover your way to success with <strong>Fametonic</strong> :
-              </h2>
+              </p>
             </div>
 
-            <ul className="text-left max-w-md mb-8 text-white space-y-2">
+            <ul className="text-left mb-8 text-white space-y-2">
               {benefits.map((item, index) => (
                 <li key={index} className="flex">
                   <Image
@@ -89,11 +89,14 @@ export default function Home() {
               ))}
             </ul>
 
-            <a href="#" className="w-[313px] h-[40px] bg-[#FC004E] text-white justify-center text-center rounded-[10px] text-[20px] font-bold drop-shadow-[2px_2px_4px_#00E7F9] hover:drop-shadow-[1px_1px_2px_#FC004E,_2px_2px_6px_#00E7F9] 
-              transition-all duration-300over:drop-shadow[2.5px_2.5px_5px_#00E7F9]">
-              GET STARTED
-            </a>
-            <div className="w-[313px] h-[16px] flex-col justify-end mt-1">
+            <a href="#"
+              className="w-full md:w-[313px] h-[40px] bg-[#FC004E] text-white flex items-center justify-center text-center 
+                        rounded-[10px] text-[20px] font-bold 
+                        drop-shadow-[2px_2px_4px_#00E7F9] 
+                        hover:drop-shadow-[1px_1px_2px_#FC004E,_2px_2px_6px_#00E7F9] 
+                        transition-all duration-300"
+            >GET STARTED</a>
+            <div className="w-full md:w-[313px] h-[16px] flex-col justify-end mt-1">
               <p className="text-[12px] text-center font-normal">
                 1-minute quiz for personalized insights
               </p>
@@ -105,13 +108,11 @@ export default function Home() {
             </p>
             <p className="text-[10px] text-[#ABABAB] mt-2">Fametonic 2025 ©All Rights Reserved.</p>
           </div>
-          <div className="w-[390px] h-[426px] md:w-[666px] md:h-[679px] overflow-visible">
+          <div className="w-[390px] h-[426px] md:w-[666px] md:h-[679px] px-2 md:px-0 overflow-visible md:absolute left-[673px] -z-10">
             <Image
               src={mobileMockup}
               alt="Mobile mockup"
               priority
-               width={666}
-              height={679}
               className="md:block object-contain"
             />
           </div>
