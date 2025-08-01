@@ -65,7 +65,7 @@ export default function Home() {
         {/* Hero Section */}
         <section className="flex flex-col-reverse md:flex-row items-center relative mt-[60px]">
           <div className="flex md:w-[516px] md:h-[511px] flex-col justify-center md:py-24 md:ml-[211px]">
-            <div className={`${fontUrbanist.className} text-[25px] md:text-[35px] font-bold text-center md:text-start`}>
+            <div className={`${fontUrbanist.className} text-[25px] md:text-[35px] font-bold text-center md:text-start md:pt-[50px]`}>
               <p className="leading-tight tracking-[0] auto-he">
                 Want to Turn Social Media Into a Profitable Career?
               </p>
@@ -74,7 +74,7 @@ export default function Home() {
               </p>
             </div>
 
-            <ul className="text-left mb-8 text-white space-y-2">
+            <ul className="text-left text-white space-y-2">
               {benefits.map((item, index) => (
                 <li key={index} className="flex">
                   <Image
@@ -88,25 +88,34 @@ export default function Home() {
                 </li>
               ))}
             </ul>
-
-            <a href="#"
-              className="w-full md:w-[313px] h-[40px] bg-[#FC004E] text-white flex items-center justify-center text-center 
+            <div className="">
+               <div className="text-center md:hidden">
+                <p className="text-[12px] text-[#ABABAB] mt-[30px]">
+                  By clicking "Get Started", you agree with Terms and Conditions, Privacy Policy, Subscription Terms
+                </p>
+                <p className="text-[10px] text-[#ABABAB] mt-2">Fametonic 2025 ©All Rights Reserved.</p>
+              </div>
+              <div className="py-[40px]">
+                  <a href="#"
+                  className="w-full md:w-[313px] h-[40px] bg-[#FC004E] text-white flex items-center justify-center text-center 
                         rounded-[10px] text-[20px] font-bold 
                         drop-shadow-[2px_2px_4px_#00E7F9] 
                         hover:drop-shadow-[1px_1px_2px_#FC004E,_2px_2px_6px_#00E7F9] 
                         transition-all duration-300"
-            >GET STARTED</a>
-            <div className="w-full md:w-[313px] h-[16px] flex-col justify-end mt-1">
-              <p className="text-[12px] text-center font-normal">
-                1-minute quiz for personalized insights
-              </p>
+                  >GET STARTED</a>
+                  <div className="w-full md:w-[313px] h-[16px] flex-col justify-end mt-1">
+                    <p className="text-[12px] text-center font-normal">
+                      1-minute quiz for personalized insights
+                    </p>
+                  </div>
+              </div>
+              <div className="hidden md:block">
+                <p className="text-[12px] text-[#ABABAB] mt-[30px]">
+                  By clicking "Get Started", you agree with Terms and Conditions, Privacy Policy, Subscription Terms
+                </p>
+                <p className="text-[10px] text-[#ABABAB] mt-2">Fametonic 2025 ©All Rights Reserved.</p>
+              </div>
             </div>
-            
-
-            <p className="text-[12px] text-[#ABABAB] mt-[30px]">
-              By clicking "Get Started", you agree with Terms and Conditions, Privacy Policy, Subscription Terms
-            </p>
-            <p className="text-[10px] text-[#ABABAB] mt-2">Fametonic 2025 ©All Rights Reserved.</p>
           </div>
           <div className="w-[390px] h-[426px] md:w-[666px] md:h-[679px] px-2 md:px-0 overflow-visible md:absolute left-[673px] -z-10">
             <Image
