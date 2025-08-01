@@ -1,5 +1,3 @@
-"use client";
-
 import Head from "next/head";
 import Image from "next/image";
 import { Urbanist } from "next/font/google";
@@ -35,7 +33,7 @@ export default function Home() {
 
       <main className="w-full min-h-screen text-white px-[20px] relative font-semibold overflow-visible pb-[40px]">
         {/* Top Bar */}
-        <div className="w-full text-white text-center p-[20px] md:p-[10px] font-semibold bg-[linear-gradient(to_right,_#FC004E,_#10CBE0)] absolute top-0 left-0 z-10">
+        <div className="w-full text-white text-center py-[10px] font-semibold bg-[linear-gradient(to_right,_#FC004E,_#10CBE0)] absolute top-0 left-0 z-10">
           <p className="text-base text-[16px] md:text-[22px]">
             <span className="text-[#00E7F9] font-extrabold">🚀 FRESH BEGINNINGS SALE:</span> Extra 25% OFF, Limited Spots - start your journey today!
           </p>
