@@ -4,6 +4,21 @@ import Image from "next/image";
 import logo from "../../public/images/logo_fametonic.svg";
 import mobileMockup from "../../public/images/mobile_mockup.png";
 import menuIcon from "../../public/icons/menu_icon.png";
+import starIcon from "../../public/icons/shining_star_icon.png";
+import { Urbanist } from "next/font/google";
+
+const fontUrbanist = Urbanist({
+  weight: ['700'],
+  subsets: ["latin"],
+});
+
+const benefits = [
+  "Start growing your influence right away — no waiting required!",
+  "Create viral TikToks and Reels step by step with easy-to-follow lessons",
+  "Use a Personal AI Worker to boost your content",
+  "Learn from expert-led courses designed for aspiring influencers"
+];
+
 
 export default function Home() {
   return (
@@ -14,7 +29,7 @@ export default function Home() {
       </Head>
 
        
-      <main className="min-h-screen text-white px-[20px] md:px-[211px] pt-[81px] relative font-semibold">
+      <main className="min-h-screen text-white px-[20px] relative font-semibold overflow-visible">
         {/* Top Bar */}
         <div className="text-white text-center py-2 px-4 font-semibold bg-[linear-gradient(to_right,_#FC004E,_#10CBE0)] absolute top-0 left-0 w-full z-10">
           <p className="text-base text-[16px] md:text-[22px]">
@@ -22,7 +37,7 @@ export default function Home() {
           </p>
         </div>
         {/* Navigation */}
-        <header className="relative flex justify-center md:justify-between border">
+        <header className="relative flex justify-center md:justify-between md:mx-[211px] pt-[81px]">
           <div className="relative w-[107.78px] h-[46.07px] md:w-[173.12px] md:h-[76px]">
             <Image
               src={logo}
@@ -48,46 +63,59 @@ export default function Home() {
         </header>
 
         {/* Hero Section */}
-        <section className="flex items-center justify-center">
-          <div className="flex w-1/2 flex-col items-center justify-center text-center px-6 py-12 md:py-24">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
-            Want to Turn Social Media Into a Profitable Career?
-          </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mb-6">
-            Discover your way to success with <strong>Fametonic</strong>: Start growing your influence right away — no waiting required!
-          </p>
+        <section className="flex flex-col-reverse md:flex-row items-center ">
+          <div className="flex w-full md:w-[511] md:h-[516] flex-col justify-center md:py-24 md:ml-[211px]">
+            <div className={`${fontUrbanist.className} text-[25px] md:text-[35px] font-bold text-center md:text-start`}>
+              <h2 className="leading-tight">
+                Want to Turn Social Media Into a Profitable Career?
+              </h2>
+              <h2 className="max-w-2xl mb-6 text-[#00E7F9] drop-shadow-[1px_5px_2px_red]">
+                Discover your way to success with <strong>Fametonic</strong> :
+              </h2>
+            </div>
 
-          <ul className="text-left max-w-md mb-8 text-gray-700 space-y-2">
-            <li>✔️ Create viral TikToks and Reels step by step with easy-to-follow lessons</li>
-            <li>✔️ Use a Personal AI Worker to boost your content</li>
-            <li>✔️ Learn from expert-led courses designed for aspiring influencers</li>
-          </ul>
+            <ul className="text-left max-w-md mb-8 text-white space-y-2">
+              {benefits.map((item, index) => (
+                <li key={index} className="flex">
+                  <Image
+                    src={starIcon}
+                    alt="menu icon"
+                    width={22}
+                    height={22}
+                    className="object-contain mr-1"
+                  /> 
+                  <span>{item}</span> 
+                </li>
+              ))}
+            </ul>
 
-          <a href="#" className="bg-orange-500 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-orange-600">
-            GET STARTED
-          </a>
+            <a href="#" className="w-[313px] h-[40px] bg-[#FC004E] text-white justify-center text-center rounded-[10px] text-[20px] font-bold drop-shadow-[2px_2px_4px_#00E7F9] hover:drop-shadow-[1px_1px_2px_#FC004E,_2px_2px_6px_#00E7F9] 
+              transition-all duration-300over:drop-shadow[2.5px_2.5px_5px_#00E7F9]">
+              GET STARTED
+            </a>
+            <div className="w-[313px] h-[16px] flex-col justify-end mt-1">
+              <p className="text-[12px] text-center font-normal">
+                1-minute quiz for personalized insights
+              </p>
+            </div>
+            
 
-          <p className="text-sm text-gray-500 mt-4 max-w-md">
-            1-minute quiz for personalized insights
-          </p>
-
-          <p className="text-xs text-gray-400 mt-2 max-w-md">
-            By clicking "Get Started", you agree with Terms and Conditions, Privacy Policy, Subscription Terms
-          </p>
+            <p className="text-[12px] text-[#ABABAB] mt-[30px]">
+              By clicking "Get Started", you agree with Terms and Conditions, Privacy Policy, Subscription Terms
+            </p>
+            <p className="text-[10px] text-[#ABABAB] mt-2">Fametonic 2025 ©All Rights Reserved.</p>
           </div>
-          <div className="w-[390px] h-[426px] md:w-[666px] md:h-[679px]">
+          <div className="w-[390px] h-[426px] md:w-[666px] md:h-[679px] overflow-visible">
             <Image
               src={mobileMockup}
               alt="Mobile mockup"
               priority
+               width={666}
+              height={679}
+              className="md:block object-contain"
             />
           </div>
         </section>
-
-        {/* Footer */}
-        <footer className="text-center text-gray-500 text-sm py-6 border-t mt-8">
-          Fametonic 2025 © All Rights Reserved.
-        </footer>
       </main>
     </>
   );

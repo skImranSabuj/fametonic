@@ -6,10 +6,6 @@ const fontFigtree = Figtree({
   weight: ['300','400','600','800'],
   subsets: ["latin"],
 });
-const fontUrbanist = Urbanist({
-  weight: ['700'],
-  subsets: ["latin"],
-});
 
 
 export const metadata: Metadata = {
