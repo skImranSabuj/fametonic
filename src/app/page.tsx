@@ -6,6 +6,7 @@ import mobileMockup from "../../public/images/mobile_mockup.png";
 import menuIcon from "../../public/icons/menu_icon.png";
 import starIcon from "../../public/icons/shining_star_icon.png";
 import { Urbanist } from "next/font/google";
+import AnimatedImage from "@/components/helpers/AnimatedImage";
 
 const fontUrbanist = Urbanist({
   weight: ['700'],
@@ -19,8 +20,11 @@ const benefits = [
   "Learn from expert-led courses designed for aspiring influencers"
 ];
 
+const terms = "By clicking &quot;Get Started&quot;, you agree with Terms and Conditions, Privacy Policy, Subscription Terms"
+
 
 export default function Home() {
+
   return (
     <>
       <Head>
@@ -30,12 +34,14 @@ export default function Home() {
 
        
       <main className="w-full min-h-screen text-white px-[20px] relative font-semibold overflow-visible pb-[40px]">
+        
         {/* Top Bar */}
-        <div className="w-full text-white text-center p-[20px] font-semibold bg-[linear-gradient(to_right,_#FC004E,_#10CBE0)] absolute top-0 left-0 z-10">
+        <div className="w-full text-white text-center p-[20px] md:p-[10px] font-semibold bg-[linear-gradient(to_right,_#FC004E,_#10CBE0)] absolute top-0 left-0 z-10">
           <p className="text-base text-[16px] md:text-[22px]">
                       <span className="text-[#00E7F9] font-extrabold">🚀 FRESH BEGINNINGS SALE:</span> Extra 25% OFF, Limited Spots - start your journey today!
           </p>
         </div>
+
         {/* Navigation */}d
         <header className="relative flex justify-center md:justify-between md:mx-[211px] pt-[81px]">
           <div className="relative w-[107.78px] h-[46.07px] md:w-[173.12px] md:h-[76px]">
@@ -91,7 +97,7 @@ export default function Home() {
             <div className="">
                <div className="text-center md:hidden">
                 <p className="text-[12px] text-[#ABABAB] mt-[30px]">
-                  By clicking "Get Started", you agree with Terms and Conditions, Privacy Policy, Subscription Terms
+                  {terms}
                 </p>
                 <p className="text-[10px] text-[#ABABAB] mt-2">Fametonic 2025 ©All Rights Reserved.</p>
               </div>
@@ -110,21 +116,17 @@ export default function Home() {
                   </div>
               </div>
               <div className="hidden md:block">
-                <p className="text-[12px] text-[#ABABAB] mt-[30px]">
-                  By clicking "Get Started", you agree with Terms and Conditions, Privacy Policy, Subscription Terms
+                <p className="text-[12px] text-[#ABABAB]">
+                  {terms}
                 </p>
                 <p className="text-[10px] text-[#ABABAB] mt-2">Fametonic 2025 ©All Rights Reserved.</p>
               </div>
             </div>
           </div>
           <div className="w-[390px] h-[426px] md:w-[666px] md:h-[679px] px-2 md:px-0 overflow-visible md:absolute left-[673px] -z-10">
-            <Image
-              src={mobileMockup}
-              alt="Mobile mockup"
-              priority
-              className="md:block object-contain"
-            />
+            <AnimatedImage src={mobileMockup} alt="Mobile mockup"/>
           </div>
+
         </section>
       </main>
     </>
